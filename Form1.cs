@@ -9,6 +9,8 @@ public partial class Form1 : Form
         InitializeComponent();
         button1.Click += Button1_Click;
         listBox1.DataSource = Persons;
+        listBox1.DisplayMember = "Name";
+       // listBox1.DataBindings.Add(new Binding("DataSource", Persons, "Name"));
     }
 
     private void Button1_Click(object? sender, EventArgs e)
