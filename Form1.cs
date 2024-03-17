@@ -9,7 +9,7 @@ public partial class Form1 : Form
         InitializeComponent();
         button1.Click += Button1_Click;
         listBox1.DataSource = Persons;
-        listBox1.DisplayMember = "Name";
+
        // listBox1.DataBindings.Add(new Binding("DataSource", Persons, "Name"));
     }
 
@@ -22,6 +22,9 @@ public partial class Form1 : Form
             if (curent.Id >0)
             {
                 Persons.Add(persons.Current);
+                listBox1.DataSource = null;
+                listBox1.DataSource = Persons;
+                listBox1.DisplayMember= "Name";
             }
         }
         else
