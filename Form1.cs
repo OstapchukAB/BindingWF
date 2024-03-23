@@ -15,12 +15,14 @@ public partial class Form1 : Form
         contextMenuStrip.Items.AddRange(new[] { new ToolStripMenuItem("Удалить") });
 
         listBox1.DataSource = Persons;
+        this.dataGridView1.DataSource=Persons;
+       
         listBox1.ContextMenuStrip = contextMenuStrip;
         contextMenuStrip.Items[0].Click += ContextMenuDelete_Click;
 
         listBox1.SelectedIndexChanged += ListBox1_SelectedIndexChanged;
-       
-      
+        this.dataGridView1.RowHeadersWidthSizeMode= DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+
         Persons.ListChanged += Persons_ListChanged;
 
         button1.Click += Button1_Click;
@@ -77,6 +79,7 @@ public partial class Form1 : Form
         listBox1.SelectedIndex = Persons.Count-1;
         SelectedPerson=Persons.LastOrDefault();
         label1.Text = SelectedPerson?.ToString();
+        
     }
 
     private void ListBox1_SelectedIndexChanged(object? sender, EventArgs e)
