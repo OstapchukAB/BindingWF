@@ -28,20 +28,13 @@ partial class Form1
     /// </summary>
     private void InitializeComponent()
     {
-        components = new System.ComponentModel.Container();
         listBox1 = new ListBox();
         dataGridView1 = new DataGridView();
         button1 = new Button();
-        personBindingSource = new BindingSource(components);
-        personBindingSource1 = new BindingSource(components);
-        personBindingSource2 = new BindingSource(components);
         label1 = new Label();
         button2 = new Button();
         button3 = new Button();
         ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-        ((System.ComponentModel.ISupportInitialize)personBindingSource).BeginInit();
-        ((System.ComponentModel.ISupportInitialize)personBindingSource1).BeginInit();
-        ((System.ComponentModel.ISupportInitialize)personBindingSource2).BeginInit();
         SuspendLayout();
         // 
         // listBox1
@@ -72,18 +65,6 @@ partial class Form1
         button1.TabIndex = 2;
         button1.Text = "+";
         button1.UseVisualStyleBackColor = true;
-        // 
-        // personBindingSource
-        // 
-        personBindingSource.DataSource = typeof(Person);
-        // 
-        // personBindingSource1
-        // 
-        personBindingSource1.DataSource = typeof(Person);
-        // 
-        // personBindingSource2
-        // 
-        personBindingSource2.DataSource = typeof(Person);
         // 
         // label1
         // 
@@ -133,9 +114,6 @@ partial class Form1
         Name = "Form1";
         Text = "Form1";
         ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-        ((System.ComponentModel.ISupportInitialize)personBindingSource).EndInit();
-        ((System.ComponentModel.ISupportInitialize)personBindingSource1).EndInit();
-        ((System.ComponentModel.ISupportInitialize)personBindingSource2).EndInit();
         ResumeLayout(false);
         PerformLayout();
     }
@@ -145,9 +123,6 @@ partial class Form1
     private ListBox listBox1;
     private DataGridView dataGridView1;
     private Button button1;
-    private BindingSource personBindingSource;
-    private BindingSource personBindingSource1;
-    private BindingSource personBindingSource2;
     private Label label1;
     private Button button2;
     private Button button3;
